@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+n, c = map(int, input().split())
 
 data = list(map(int, input().split()))
 
@@ -7,32 +7,30 @@ def merge_sort(left, right):
         mid = (left + right) // 2
         merge_sort(left, mid)
         merge_sort(mid + 1, right)
-        print(*data)
         merge(left, mid, right)
 
 def merge(left, mid, right):
-    j = mid + 1
-    i = left
-    k = right
+    a = left
+    b = mid + 1
+    c = right
     tmp = []
 
-    while(i <= mid and j <= right):
+    while(a <= mid and b <= right):
         global data
-        if(data[i] <= data[j]):
-            tmp.append(data[i])
-            i += 1
+        if(data[a] <= data[c]):
+            tmp.append(data[a])
+            a += 1
         else:
-            tmp.append(data[j])
-            j += 1
+            tmp.append(data[c])
+            b += 1
+        print(*tmp)
 
-    if(i > mid):
-        tmp += data[j:]
+    if(a > mid):
+        tmp += data[c:]
     else:
-        tmp += data[i:]
+        tmp += data[a:]
     
     data = tmp
 
-merge_sort(0, n)
-print(*data)
-
-# 28~ 슬라이싱에서 data list보다 크게 리스트 만들어졌음
+# merge_sort(0, n)
+# print(*data)
