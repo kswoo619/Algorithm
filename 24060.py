@@ -1,12 +1,12 @@
 n, c = map(int, input().split())
-
 data = list(map(int, input().split()))
+save = []
 
 def merge_sort(arr):
-    if(len(arr) <= 1):
+    if(len(arr) == 1):
         return arr
     
-    mid = len(arr) // 2
+    mid = (len(arr) + 1) // 2
     left = arr[:mid]
     right = arr[mid:]
 
@@ -15,28 +15,30 @@ def merge_sort(arr):
     return merge(left, right)
 
 def merge(left, right):
-    print('merge')
-    print(*left, ',', *right)
     a, b = 0, 0
     tmp = []
+    global save
 
-    # 두 리스트에서 더 작은 값 선택 (merge)
     while(a < len(left) and b < len(right)):
-        if(left[a] <= right[a]):
+        if(left[a] <= right[b]):
+            save.append(left[a])
             tmp.append(left[a])
             a += 1
         else:
+            save.append(right[b])
             tmp.append(right[b])
             b += 1
         
-    # 리스트 남은 값 처리
     while(a < len(left)):
+        save.append(left[a])
         tmp.append(left[a])
         a += 1
     while(b < len(right)):
+        save.append(right[b])
         tmp.append(right[b])
         b += 1
 
     return tmp
 
-print(merge_sort(data))
+merge_sort(data)
+print(save[c - 1] if c - 1 < len(save) else -1)
