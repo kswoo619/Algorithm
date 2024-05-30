@@ -14,7 +14,6 @@ def solution(s):
                         valid += 1
                 else:
                     stack.append(i)
-        print(s, stack, valid)
         if not stack:
             break
         s = s[1:] + s[0]
