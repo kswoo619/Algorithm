@@ -15,7 +15,7 @@ def solution(want, number, discount):
         if cnt[discount[i]] == 0:
             del cnt[discount[i]]
         
-        if myd.items() == cnt.items():
+        if myd == cnt:
             answer += 1
         
     return answer
