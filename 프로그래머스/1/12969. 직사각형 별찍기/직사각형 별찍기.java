@@ -6,14 +6,11 @@ class Solution {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        String ans = "";
-
         for(int i = 0; i < b; i++){
-            for(int j = 0; j < a; j++) ans += "*";
-            ans += "\n";
+            for(int j = 0; j < a; j++) System.out.print("*");
+            System.out.println();
         }
 
-        System.out.println(ans);
         sc.close();
     }
 }
