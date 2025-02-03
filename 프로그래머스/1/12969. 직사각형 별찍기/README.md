@@ -1,10 +1,10 @@
 # [level 1] 직사각형 별찍기 - 12969 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12969?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12969?language=python3) 
 
 ### 성능 요약
 
-메모리: 85.1 MB, 시간: 244.91 ms
+메모리: 7.45 MB, 시간: 16.76 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 03일 20:02:43
+2025년 02월 03일 20:03:26
 
 ### 문제 설명
 
