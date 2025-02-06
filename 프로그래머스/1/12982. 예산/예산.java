@@ -9,6 +9,7 @@ class Solution {
         for(int e:d){
             budget -= e;
             if (budget >= 0) answer++;
+            else break;
         }
         
         return answer;
